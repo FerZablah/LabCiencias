@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>WebFrameworks - Electron - Aplicación 1</title>
+</head>
+
+<body>
+    <div>
+        <button type="button" id="btn1">Botón 1</button>
+        <p id="p1">0</p>
+    </div>
+    <div>
+        <button type="button" id="btn2">Botón 2</button>
+        <p id="p2">0</p>
+    </div>
+    <div>
+        <button type="button" id="btn3">Botón 3</button>
+        <p id="p3">0</p>
+    </div>
+</body>
+<script>
+    let values = [0,0,0];
+    for(let i=0;i<3;i++){
+            document.getElementById('btn' + (i+1)).onclick = function () {
+                values[i]++;
+                document.getElementById('p' + (i+1)).innerHTML = values[i];
+            }
+    }
+</script>
+
+</html>
